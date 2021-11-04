@@ -538,7 +538,7 @@ class RabbitMQQueue extends Queue implements QueueContract
     {
         $properties = [
             'content_type' => 'application/json',
-            'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT,
+            'delivery_mode' => AMQPMessage::DELIVERY_MODE_NON_PERSISTENT,
         ];
 
         $currentPayload = json_decode($payload, true, 512);
